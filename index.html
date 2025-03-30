@@ -12,11 +12,11 @@
     <nav class="bg-emerald-900 px-6 py-4 flex justify-between items-center shadow-xl">
         <div class="text-white text-xl font-semibold">Electronic Project Club</div>
 
-        <div class="hidden md:flex space-x-6">
+        <div class="hidden md:flex space-x-6 " >
             <div class="relative group">
                <button class="text-white px-4 py-2 rounded-full bg-[#0e1613] hover:bg-[#1b2a25] "> Members ▾</button>
             </div>
-            <div class="text-white px-4 py-2 rounded-full bg-[#0e1613] hover:bg-[#1b2a25] transition">Events</div>
+            <div class="text-white px-4 py-2 rounded-full bg-[#0e1613] hover:bg-[#1b2a25] transition"  id="menu" onclick="toggleMenu()">Events</div>
             <div class="relative group">
                 <button class="text-white px-4 py-2 rounded-full bg-[#0e1613] hover:bg-[#1b2a25] transition">Resources
                     ▾</button>
@@ -172,7 +172,22 @@
         </div>
 
     </div>
+<script>
+  const toggleMenu = () => {
+        const menu = document.getElementById("menu");
 
+        menu.addEventListener("click", () => {
+            // Toggle between red and green
+            if (menu.style.backgroundColor === "red") {
+                menu.style.backgroundColor = "green";
+            } else {
+                menu.style.backgroundColor = "red";
+            }
+        });
+    };
+
+
+</script>
 </body>
 
 </html>
